@@ -8,7 +8,7 @@ export class AccessLogWriter {
   }
   async finalize() {
     await fs.writeFile(
-      "src/output/access_logs.json",
+      "output/access_logs.json",
       JSON.stringify(this.records, null, 2)
     );
   }
